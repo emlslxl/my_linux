@@ -1,8 +1,8 @@
 /*
 * @Author: liang
 * @Date:   2016-08-11 16:23:57
-* @Last Modified by:   liang
-* @Last Modified time: 2016-08-23 11:18:12
+* @Last Modified by:   emlslxl
+* @Last Modified time: 2016-09-19 15:03:19
 */
 
 #include <stdio.h>
@@ -16,7 +16,7 @@ int main()
 {
 	char ch;
 	
-	fd = open("/dev/chardevicedriver0", O_RDWR);
+	fd = open("/dev/em6057_pwm1", O_RDWR);
 	if(fd<0)
 	{
 		printf("open failed!\n");
@@ -48,7 +48,7 @@ int main()
 				ioctl(fd,0,0);
 				break;
 			case 'O':
-				ioctl(fd,1,0);
+				ioctl(fd,50,0);
 				break;
 			default:
 				break;
